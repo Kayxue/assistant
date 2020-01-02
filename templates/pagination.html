@@ -1,0 +1,19 @@
+{% if is_paginated %}
+  <div>
+  {% if page_obj.has_previous %}
+    <a class="btn btn-sm btn-danger btn-group-sm" href="?page={{ page_obj.previous_page_number }}">上一頁</a>
+  {% endif %}
+    <div class="btn-group" role="group" aria-label="Basic example">
+    {% for page in paginator.page_range %}
+      {% if page == page_obj.number %}
+        <a href="#" class="btn btn-light"><font color="red">{{ page }}</font></a>
+      {% else %}
+        <a href="?page={{ page }}" class="btn btn-light">{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+    </div>
+  {% if page_obj.has_next %}
+    <a class="btn btn-sm btn-success" href="?page={{ page_obj.next_page_number }}">下一頁</a>
+  {% endif %}
+  </div>
+{% endif %}
