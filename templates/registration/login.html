@@ -2,9 +2,9 @@
 
 {% block content %}
 {% if form.errors %}
-<p>帳號或密碼不符合，請再試一次。</p>
+<p class="alert alert-danger">帳號或密碼不符合，請再試一次。</p>
 {% endif %}
-
+<h2 class="font-weight-bold">登入</h2>
 <form action="" method="post">
   {% csrf_token %}
   <div>
@@ -16,7 +16,7 @@
     <td>{{ form.password }}</td>
   </div>
   <div>
-    <input type="submit" value="登入" class="btn btn-sm btn-secondary" />
+    <input type="submit"  value="登入" class="btn btn-sm btn-secondary" />
   </div>
 </form>
 {% endblock %}

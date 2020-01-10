@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>您已登出!!</p>  
+<h2 class="font-weight-bold"><i class="fas fa-check-square"></i> 登出成功</h2>
+<p class="alert alert-info mt-4">您已登出!!</p> 
 
-<a href="{% url 'login'%}" class="btn btn-sm btn-info">請按此處重新登入</a>
+<a href="{% url 'login'%}" class="btn btn-sm btn-info"><i class="fas fa-sign-in-alt"></i> 重新登入</a>
 {% endblock %}
