@@ -4,19 +4,24 @@
 {% if form.errors %}
 <p class="alert alert-danger">帳號或密碼不符合，請再試一次。</p>
 {% endif %}
-<h2 class="font-weight-bold">登入</h2>
-<form action="" method="post">
-  {% csrf_token %}
-  <div>
-    <td>帳號：</td>
-    <td>{{ form.username }}</td>
-  </div>
-  <div>
-    <td>密碼：</td>
-    <td>{{ form.password }}</td>
-  </div>
-  <div>
-    <input type="submit"  value="登入" class="btn btn-sm btn-secondary" />
-  </div>
-</form>
+
+<div class="card">
+  <h2 class="font-weight-bold card-header">登入</h2>
+  <form action="" method="post">
+    {% csrf_token %}
+    <div class="card-body">
+      <div class="mb-2">
+        <td>帳號：</td>
+        <td>{{ form.username }}</td>
+      </div>
+      <div class="mt-2">
+        <td>密碼：</td>
+        <td>{{ form.password }}</td>
+      </div>
+    </div>
+    <div class="card-footer">
+      <input type="submit"  value="登入" class="btn btn-sm btn-secondary" />
+    </div>
+  </form>
+</div>
 {% endblock %}
