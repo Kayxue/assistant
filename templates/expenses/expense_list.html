@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2 class="font-weight-bold mb-4">我的支出紀錄 <span class="badge badge-info badge-pill badge-sm"><i class="fas fa-user-alt"></i> 使用者：{{user.username}}</span></span></h2>
+<h2 class="font-weight-bold mb-4">我的支出紀錄 {% if user.is_superuser %}<span class="badge badge-success badge-pill badge-sm"><i class="fas fa-user-cog"></i> 管理員：{{user.username}}</span> {% else %}<span class="badge badge-info badge-pill badge-sm"><i class="fas fa-user-alt"></i> 使用者：{{user.username}}</span>{% endif %}</h2>
 <table class="table table-striped table-hover">
   <thead class="thead-dark">
     <tr>
