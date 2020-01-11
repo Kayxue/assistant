@@ -10,11 +10,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel="stylesheet" href="/static/css/custom.css">
   <title>數位助理</title>
-  <style>
-    *{
-      
-    }
-  </style>
+  
 </head>
 <body>
   
@@ -31,9 +27,9 @@
         <li class="nav-item"><a href="{% url 'expense_list' %}" class="btn btn-primary"><i class="fas fa-clipboard-list"></i> 支出列表</a></li>
         <li class="nav-item"><a href="{% url 'expense_create' %}" class="btn btn-primary"><i class="fas fa-coins"></i> 新增消費</a></li>
         {% if user.is_authenticated %}
-        <li class="nav-item"><a href="" class="btn btn-primary"><i class="fas fa-address-card"></i> {{ user.username }}</a></li>
+        <li class="nav-item"><a href="/userinfo/" class="btn btn-primary"><i class="fas fa-address-card"></i> {{ user.username }}</a></li>
         <li class="nav-item"><a href="/accounts/logout" class="nav-link btn btn-sm btn-danger"><i class="fas fa-sign-out-alt"></i> 登出</a></li>
-        <li>{{ user.date_joined }}</li>
+        
         {% else %}
         <li class="nav-item"><a href="{% url 'login' %}" class="nav-link btn btn-sm btn-primary"><i class="fas fa-sign-in-alt"></i> 登入</a></li>
         {% endif %}
