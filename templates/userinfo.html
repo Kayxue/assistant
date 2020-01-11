@@ -29,13 +29,16 @@
         <tr>
             <td>使用者群組</td>
             <td>{{user.groups}}</td>
+            
+                
+            
         </tr>
         <tr>
             <td>使用者權限</td>
             <td>{{user.user_permissions}}</td>
         </tr>
         <tr>
-            <td>是否為員工</td>
+            <td>是否為工作人員</td>
             {% if user.is_staff %}
                 <td>是</td>
             {% else %}
