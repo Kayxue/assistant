@@ -5,8 +5,8 @@ table{
     text-align: center !important;
 }
 button{
-    color: white !important;
+    color: white !important; /*我也不知道為何沒有設定href但有設定data-toggle和data-garget的按鈕之文字會變黑色，特寫此段以強制將按鈕文字設為白色*/
 }
 .logout{
-    color: white !important;
+    color: white !important; /*我也不知道為何沒有設定href但有設定data-toggle和data-garget的按鈕之文字會變黑色，特寫此段以強制將按鈕文字設為白色*/
 }
