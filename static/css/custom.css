@@ -1,6 +1,12 @@
 body {
-    font-family: "微軟正黑體";
+    font-family: "微軟正黑體" !important;
 }
 table{
-    text-align: center;
+    text-align: center !important;
+}
+button{
+    color: white !important;
+}
+.logout{
+    color: white !important;
 }
