@@ -23,14 +23,14 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         {% if user.is_authenticated %}
-        <li class="nav-item"><a href="/journal/" class="btn btn-primary"><i class="fas fa-calendar-alt"></i> 日誌列表</a></li>            
-        <li class="nav-item"><a href="/journal/create/" class="btn btn-primary"><i class="far fa-edit"></i> 寫日誌</a></li>
-        <li class="nav-item"><a href="{% url 'expense_list' %}" class="btn btn-primary"><i class="fas fa-clipboard-list"></i> 支出列表</a></li>
-        <li class="nav-item"><a href="{% url 'expense_create' %}" class="btn btn-primary"><i class="fas fa-coins"></i> 新增消費</a></li>
+        <li class="nav-item"><a href="/journal/" class="btn btn-primary nav-link"><i class="fas fa-calendar-alt"></i> 日誌列表</a></li>            
+        <li class="nav-item"><a href="/journal/create/" class="btn btn-primary nav-link"><i class="far fa-edit"></i> 寫日誌</a></li>
+        <li class="nav-item"><a href="{% url 'expense_list' %}" class="btn btn-primary nav-link"><i class="fas fa-clipboard-list"></i> 支出列表</a></li>
+        <li class="nav-item"><a href="{% url 'expense_create' %}" class="btn btn-primary nav-link"><i class="fas fa-coins"></i> 新增消費</a></li>
         {% if user.is_superuser %}
-          <li class="nav-item"><a href="/admin/" class="btn btn-primary"><i class="fas fa-cogs"></i> 查看資料庫</a></li>
+          <li class="nav-item"><a href="/admin/" class="btn btn-primary nav-link"><i class="fas fa-cogs"></i> 查看資料庫</a></li>
         {% endif %}
-        <li class="nav-item"><a href="/userinfo/" class="btn btn-primary"><i class="fas fa-address-card"></i> {{ user.username }}</a></li>
+        <li class="nav-item"><a href="/userinfo/" class="nav-link btn btn-primary"><i class="fas fa-address-card"></i> {{ user.username }}</a></li>
         <li class="nav-item"><a type="button" class="nav-link btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-sign-out-alt"></i> 登出</a></li>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
