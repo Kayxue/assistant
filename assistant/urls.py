@@ -23,5 +23,6 @@ urlpatterns = [
     path('journal/', include('journal.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('expenses/',include('expenses.urls')),
+    path('userinfo/',include('userinfo.urls'))
     
 ]
