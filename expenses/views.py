@@ -48,10 +48,4 @@ class ExpenseDelete(LoginRequiredMixin, DeleteView):
     def get_success_url(self):
         return reverse('expense_list')  # 刪除成功返回支出紀錄列表頁面
 
-class Userinfo(LoginRequiredMixin, TemplateView):
-    template_name="userinfo.html"
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['title'] = '使用者資訊'
-        return context
